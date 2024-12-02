@@ -1,7 +1,8 @@
 body {
-  position: relative; /* Necesario para usar el pseudo-elemento */
-  margin: 0; /* Eliminar márgenes por defecto */
-  height: 100vh; /* Asegurar que el fondo ocupe toda la pantalla */
+  position: relative; 
+  margin: 0; 
+  height: 100vh; 
+  font-family: 'Press Start 2P', cursive;
 }
  
 body::before {
@@ -12,10 +13,10 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-  linear-gradient(rgba(224, 198, 175, 0.5), rgba(224, 198, 175, 0.5)), 
+  linear-gradient(rgba(224, 198, 175, 0.9), rgba(224, 198, 175, 0.9)), 
   url('/img/pokearchLogo.jpg') no-repeat center;
-  background-size: cover; /* Ajustar la imagen al tamaño del viewport */
-  z-index: -1; /* Colocar detrás del contenido del body */
+  background-size: cover; 
+  z-index: -1; 
 }
 .navbar {
   background-color: rgba(0, 0, 0, 0.5);
@@ -29,10 +30,18 @@ body::before {
 .nav-link {
   color: #FFF !important;
 }
+/* Boton de Bsuqueda */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .search-bar {
+  width: 50%; /* Ajustar tamaño del cuadro de búsqueda */
   border: none;
   border-radius: 50px;
-  padding: 5px 15px;
+  padding: 10px 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .search-bar:focus {
@@ -40,12 +49,15 @@ body::before {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
 .btn-search {
+  margin-left: 10px;
   border-radius: 50px;
   background-color: #FFD580; /* Amarillo pastel */
   color: #333;
   border: none;
+  padding: 10px 20px;
 }
 .btn-search:hover {
   background-color: #FFAA33; /* Amarillo más intenso */
   color: white;
 }
+/* Pokemon Cards */
