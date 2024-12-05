@@ -23,9 +23,12 @@ body::before {
   color: #fff;
 }
 .navbar-brand {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   font-weight: bold;
   color: #FFF;
+}
+.navbar-brand:hover {
+  color: #E0C6AF;
 }
 .nav-link {
   color: #FFF !important;
