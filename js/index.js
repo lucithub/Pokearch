@@ -11,19 +11,26 @@ function buscarPokemon(){
         let habilidadesCount = data.abilities;
         let habilidades = document.getElementById("habilidadPokemon");
         habilidades.textContent = "Habilidades => ";
-        habilidadesCount.forEach(abilities => {
-            document.createElement("p");
-            habilidades.append(abilities.ability.name);
-            habilidades.append(', ')
-        });
+        habilidadesCount.forEach((abilities, index) => {
+            if (index === habilidadesCount.length - 1) {
+                habilidades.append(abilities.ability.name+'.')
+            }
+            else{
+                habilidades.append(abilities.ability.name+', ');
+            };
+        });          
         let baseExperience = document.getElementById("baseExperiencePokemon");
         baseExperience.textContent = "Base Experience => "+data.base_experience;
         let formas = document.getElementById("formasPokemon");
         formas.textContent = "Formas => ";
         let formasCount = data.forms;
-        formasCount.forEach(forms => {
-            formas.append(forms.name);
-            formas.append(', ')
+        formasCount.forEach((forms, index) => {
+            if(index === formasCount.length - 1){
+                formas.append(forms.name+'.');
+            }
+            else{
+                formas.append(forms.name+', ');
+            }
         });
     })
     .catch(error => console.log("Error: "+error));
